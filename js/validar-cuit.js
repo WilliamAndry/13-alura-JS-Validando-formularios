@@ -1,8 +1,7 @@
 export default function esUnCUIT(campo) {
     const cuit = campo.value.replace(/\-/g, "");
     if (!tieneCaracteresRepetidos(cuit)) {
-      if (validarPrimerosDigitosCUIT(cuit) && va
-      lidarDigitoVerificador(cuit)) {
+      if (validarPrimerosDigitosCUIT(cuit) && validarDigitoVerificador(cuit)) {
         // console.log("el Cuit existe");
       } else {
         campo.setCustomValidity("No es un código válido");
